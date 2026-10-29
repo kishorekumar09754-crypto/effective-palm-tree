@@ -1,0 +1,122 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Akishore Kumar Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: sticky pill nav, hero with tilted initials tile, two-column card grid */
+:root{
+  --bg:#150f1f; --panel:#1f1730; --line:#352948; --fg:#f4eefb; --muted:#b4a6c9;
+  --accent:#ffb347; --accent-fg:#1a1024; --accent-2:#c38bff;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fbf7f1;--panel:#fff;--line:#e6dccd;--fg:#2a1d3a;--muted:#6d5e80;--accent:#c2570a;--accent-fg:#fff;--accent-2:#7a3fd1;color-scheme:light}}
+:root[data-theme="light"]{--bg:#fbf7f1;--panel:#fff;--line:#e6dccd;--fg:#2a1d3a;--muted:#6d5e80;--accent:#c2570a;--accent-fg:#fff;--accent-2:#7a3fd1;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:6rem}
+body{background:var(--bg);color:var(--fg);font:400 1rem/1.65 var(--body);margin:0;padding-inline:1rem}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{max-width:60rem;margin-inline:auto}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:.8rem;margin-inline:-1rem;padding-inline:1rem}
+.bar{max-width:60rem;margin-inline:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem}
+.logo{font:800 1.15rem var(--display);letter-spacing:-.01em}
+.logo span{color:var(--accent)}
+nav{display:flex;flex-wrap:wrap;gap:.3rem}
+nav a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.88rem;padding:.3rem .75rem;border-radius:99px;border:1px solid var(--line)}
+nav a:hover{color:var(--accent-fg);background:var(--accent);border-color:var(--accent)}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:2rem 3rem;align-items:center;padding-block:3rem 2rem}
+.avatar{width:13rem;max-width:100%;aspect-ratio:1;border-radius:2.2rem 2.2rem 2.2rem .6rem;background:linear-gradient(150deg,var(--accent-2),var(--accent));display:grid;place-items:center;font:800 4.5rem var(--display);color:var(--accent-fg);overflow:hidden;transform:rotate(-3deg)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.eyebrow{color:var(--accent);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .6rem}
+h1{font:800 clamp(2.5rem,8vw,4.6rem)/1 var(--display);letter-spacing:-.03em;margin:0 0 1rem;text-wrap:balance}
+.lead{color:var(--muted);max-width:32rem;margin:0 0 1.5rem}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border-radius:99px}
+.btn:hover{filter:brightness(1.08)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;padding-block:1rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:1.2rem;padding:1.5rem}
+.card.wide{grid-column:1/-1}
+h2{font:800 1.5rem/1.2 var(--display);letter-spacing:-.01em;margin:0 0 1rem;display:flex;align-items:center;gap:.6rem;text-wrap:balance}
+h2::before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--accent)}
+h3{font-size:.95rem;margin:1rem 0 .15rem;color:var(--accent-2)}
+p{margin:0 0 .6rem}
+dl{margin:.8rem 0 0;display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.2rem}
+dt{color:var(--muted)} dd{margin:0;font-weight:500;min-width:0;overflow-wrap:anywhere}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.tags li{border:1px solid var(--line);border-radius:99px;padding:.4rem 1rem;font-weight:500;background:var(--bg)}
+.skills li{border-color:var(--accent-2)}
+.contact p{overflow-wrap:anywhere}
+a{color:var(--accent)}
+footer{max-width:60rem;margin:3rem auto 0;padding-block:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
+@media (max-width:42rem){.hero{grid-template-columns:1fr;padding-top:2rem}.avatar{width:10rem}.grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:30rem){dl{grid-template-columns:1fr;gap:0}dt{margin-top:.5rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<header>
+  <div class="bar">
+    <div class="logo">My<span>.</span>Portfolio</div>
+    <nav aria-label="Sections">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#hobbies">Hobbies</a><a href="#goals">Goals</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section id="home" class="hero">
+    <div class="avatar" aria-hidden="true">AK</div>
+    <div>
+      <p class="eyebrow">Student | Learner | Future Engineer</p>
+      <h1>Hello, I'm Akishore Kumar</h1>
+      <p class="lead">Welcome to my personal website. Here you can know more about me, my education, skills, hobbies and future goals.</p>
+      <a class="btn" href="#about">Know More About Me</a>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section id="about" class="card wide">
+      <h2>About Me</h2>
+      <p>Hello! My name is Akishore Kumar. I am a student who is interested in technology, programming and learning new things.</p>
+      <dl>
+        <dt>Name</dt><dd>Akishore Kumar</dd>
+        <dt>Date of Birth</dt><dd>22 / 09 / 2008</dd>
+      </dl>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <h3>School Education</h3>
+      <p>Completed my school education at Your School Name, Your City.</p>
+      <h3>College Education</h3>
+      <p>Currently pursuing my higher education at Your College Name, Your City.</p>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>My Skills</h2>
+      <ul class="tags skills"><li>C Programming</li><li>Python</li><li>HTML</li><li>CSS</li></ul>
+    </section>
+
+    <section id="hobbies" class="card">
+      <h2>My Hobbies</h2>
+      <ul class="tags"><li>Listening to Music</li><li>Watching Movies</li><li>Learning New Things</li><li>Exploring Technology</li></ul>
+    </section>
+
+    <section id="goals" class="card">
+      <h2>My Goals</h2>
+      <p>My main goal is to complete my education with good knowledge and develop my technical skills.</p>
+    </section>
+
+    <section id="contact" class="card wide contact">
+      <h2>Contact Me</h2>
+      <dl>
+        <dt>Email</dt><dd>kishorekumar09754@gmail.com</dd>
+        <dt>Phone</dt><dd>6383379541</dd>
+      </dl>
+    </section>
+  </div>
+</div>
+
+<footer>2026 My Personal Website | Created by Akishore Kumar</footer>
+
+</body></html>
